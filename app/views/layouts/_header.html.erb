@@ -10,5 +10,23 @@
 			</button>
 			<%= link_to "ProfitCruncher", root_path, id: "logo", class: "navbar-brand" %>
 		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<nav id="main-navbar" class="collapse navbar-collapse" role="navigation">
+			<ul class="nav navbar-nav navbar-right">
+				<li><%= link_to "Home", root_path, class: "active" %></li>
+				<li><%= link_to "Gross Profit Calculator", gross_profit_calculator_path %></li>
+				<li><%= link_to "Markup Calculator", markup_calculator_path %></li>
+        <li class="dropdown">
+        	<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            Sales Promotion Calculators <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+            <li><%= link_to "Sales Lift Calculator", sales_lift_calculator_path %></li>
+            <li><%= link_to "Work to Goal Calculator", work_to_goal_calculator_path %></li>
+          </ul>
+        </li>
+			</ul>
+		</nav>
 	</div>
 </header>

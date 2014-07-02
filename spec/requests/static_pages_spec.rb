@@ -7,6 +7,11 @@ describe "StaticPages" do
   shared_examples_for "all static pages" do
     it { should have_selector('h1', text: heading) }
     it { should have_title(full_title(page_title)) }
+    it { should have_link('Home', href: root_path) }
+    it { should have_link('Gross Profit Calculator', href: gross_profit_calculator_path) }
+    it { should have_link('Markup Calculator', href: markup_calculator_path) }
+    it { should have_link('Sales Lift Calculator', href: sales_lift_calculator_path) }
+    it { should have_link('Work to Goal Calculator', href: work_to_goal_calculator_path) }
   end
 
   describe "Home page" do
