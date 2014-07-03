@@ -52,10 +52,8 @@ h1 {
 h2 {
   font-size: 1.2em;
   letter-spacing: 0px;
-  margin-bottom: 30px;
-  text-align: center;
+  /*margin-bottom: 30px;*/
   font-weight: normal;
-  color: $gray-light;
 }
 
 p {
@@ -116,4 +114,10 @@ footer {
   width: 100%;
   margin-top: 45px;
   @include box_sizing;
+}
+
+/* input groups */
+
+.input-group button {
+  margin-top: 20px;
 }

@@ -8,7 +8,7 @@ describe "StaticPages" do
     it { should have_selector('h1', text: heading) }
     it { should have_title(full_title(page_title)) }
     it { should have_link('Home', href: root_path) }
-    it { should have_link('Gross Profit Calculator', href: gross_profit_calculator_path) }
+    it { should have_link('Gross Profit Margin Calculator', href: gross_profit_calculator_path) }
     it { should have_link('Markup Calculator', href: markup_calculator_path) }
     it { should have_link('Sales Lift Calculator', href: sales_lift_calculator_path) }
     it { should have_link('Work to Goal Calculator', href: work_to_goal_calculator_path) }
@@ -27,8 +27,8 @@ describe "StaticPages" do
   describe "Gross Profit page" do
   	before { visit gross_profit_calculator_path }
 
-  	let(:heading) { 'Gross Profit' }
-  	let(:page_title) { 'Gross Profit Calculator' }
+  	let(:heading) { 'Gross Profit Margin' }
+  	let(:page_title) { 'Gross Profit Margin Calculator' }
 
   	it_should_behave_like "all static pages"
   end
