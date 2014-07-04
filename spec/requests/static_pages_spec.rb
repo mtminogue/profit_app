@@ -12,6 +12,7 @@ describe "StaticPages" do
     it { should have_link('Markup Calculator', href: markup_calculator_path) }
     it { should have_link('Sales Lift Calculator', href: sales_lift_calculator_path) }
     it { should have_link('Work to Goal Calculator', href: work_to_goal_calculator_path) }
+    it { should have_link('ProfitCrunch', href: profitcrunch_path) }
   end
 
   describe "Home page" do
@@ -22,6 +23,15 @@ describe "StaticPages" do
 
     it_should_behave_like "all static pages"
     it { should_not have_title('| Home') }
+  end
+
+  describe "ProfitCrunch page" do
+  	before { visit profitcrunch_path }
+
+  	let(:heading) { 'ProfitCrunch' }
+  	let(:page_title) { 'ProfitCrunch' }
+
+  	it_should_behave_like "all static pages"
   end
 
   describe "Gross Profit page" do

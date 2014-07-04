@@ -1,0 +1,50 @@
+<% provide(:title, 'ProfitCrunch') %>
+<h1>ProfitCrunch</h2>
+
+	<div class="row">
+		<div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+			<div class="col-xs-6">
+				<h2 class="input-label">Units/Case:</h2>
+				<div class="input-group">
+  				<input type="number" step=".01" class="form-control profitcrunch-units-case">
+				</div>
+				<h2 class="input-label">Case Cost:</h2>
+				<div class="input-group">
+  				<span class="input-group-addon">$</span>
+  				<input type="number" step=".01" class="form-control profitcrunch-case-cost">
+				</div>
+				<h2 class="input-label">Unit Cost:</h2>
+				<div class="input-group">
+  				<span class="input-group-addon">$</span>
+  				<input type="number" step=".01" class="form-control profitcrunch-unit-cost" id="disabledInput" disabled>
+				</div>
+				<h2 class="input-label">Unit Sell Price:</h2>
+				<div class="input-group">
+  				<span class="input-group-addon">$</span>
+  				<input type="number" step=".01" class="form-control profitcrunch-unit-ptc">
+				</div>
+			</div>
+			<div class="col-xs-6">
+				<h2 class="input-label">Total Profit:</h2>
+				<div class="input-group">
+  				<span class="input-group-addon">$</span>
+  				<input type="number" step=".01" class="form-control profitcrunch-total-profit" id="disabledInput" disabled>
+				</div>
+				<h2 class="input-label">Unit Profit:</h2>
+				<div class="input-group">
+  				<span class="input-group-addon">$</span>
+  				<input type="number" step=".01" class="form-control profitcrunch-unit-profit" id="disabledInput" disabled>
+				</div>
+				<h2 class="input-label">Gross Profit Margin:</h2>
+				<div class="input-group">
+  				<input type="number" step=".01" class="form-control profitcrunch-gross-profit" id="disabledInput" disabled>
+  				<span class="input-group-addon">%</span>
+				</div>
+				<h2 class="input-label">Markup:</h2>
+				<div class="input-group">
+  				<input type="number" step=".01" class="form-control profitcrunch-markup" id="disabledInput" disabled>
+  				<span class="input-group-addon">%</span>
+				</div>
+			</div>
+		</div>
+	</div>

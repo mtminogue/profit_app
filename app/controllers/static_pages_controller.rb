@@ -3,6 +3,9 @@ class StaticPagesController < ApplicationController
   def home
   end
 
+  def profitcrunch
+  end
+
   def gross_profit
   end
 

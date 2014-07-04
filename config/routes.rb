@@ -1,5 +1,6 @@
 ProfitApp::Application.routes.draw do
   root 'static_pages#home'
+  match '/profitcrunch', to: 'static_pages#profitcrunch', via: 'get'
   match '/gross_profit_calculator', to: 'static_pages#gross_profit', via: 'get'
   match '/markup_calculator', to: 'static_pages#markup', via: 'get'
   match '/sales_lift_calculator', to: 'static_pages#sales_lift', via: 'get'
