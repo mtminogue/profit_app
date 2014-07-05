@@ -1,22 +1,22 @@
 <% provide(:title, 'Markup Calculator') %>
-<h1>Markup Calculator</h2>
+<h1>Markup Calculator</h1>
 
 	<div class="row">
 		<div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
 			<div class="col-xs-8 col-xs-offset-2">
-				<h2 class="input-label">Cost:</h2>
+				<label for="cost">Cost:</label>
 				<div class="input-group">
   				<span class="input-group-addon">$</span>
-  				<input type="number" step=".01" class="form-control calc-cost">
+  				<input type="number" step=".01" class="form-control calc-cost" id="cost">
 				</div>
-				<h2 class="input-label">Sell Price:</h2>
+				<label for="ptc">Sell Price:</label>
 				<div class="input-group">
   				<span class="input-group-addon">$</span>
-  				<input type="number" step=".01" class="form-control calc-ptc">
+  				<input type="number" step=".01" class="form-control calc-ptc" id="ptc">
 				</div>
-				<h2 class="input-label">Markup:</h2>
+				<label for="markup">Markup:</label>
 				<div class="input-group">
-  				<input type="number" step=".01" class="form-control calc-markup">
+  				<input type="number" step=".01" class="form-control calc-markup" id="markup">
   				<span class="input-group-addon">%</span>
   			</div>	
 			</div>

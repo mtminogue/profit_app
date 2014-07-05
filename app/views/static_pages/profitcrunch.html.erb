@@ -1,48 +1,48 @@
 <% provide(:title, 'ProfitCrunch') %>
-<h1>ProfitCrunch</h2>
+<h1>ProfitCrunch</h1>
 
 	<div class="row">
 		<div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
 			<div class="col-xs-6">
-				<h2 class="input-label">Units/Case:</h2>
+				<label for="units-case">Units/Case:</label>
 				<div class="input-group">
-  				<input type="number" step=".01" class="form-control profitcrunch-units-case">
+  				<input type="number" step=".01" class="form-control profitcrunch-units-case" id="units-case">
 				</div>
-				<h2 class="input-label">Case Cost:</h2>
+				<label for="case-cost">Case Cost:</label>
 				<div class="input-group">
   				<span class="input-group-addon">$</span>
-  				<input type="number" step=".01" class="form-control profitcrunch-case-cost">
+  				<input type="number" step=".01" class="form-control profitcrunch-case-cost" id="case-cost">
 				</div>
-				<h2 class="input-label">Unit Cost:</h2>
+				<label for="unit-cost">Unit Cost:</label>
 				<div class="input-group">
   				<span class="input-group-addon">$</span>
-  				<input type="number" step=".01" class="form-control profitcrunch-unit-cost" id="disabledInput" disabled>
+  				<input type="number" step=".01" class="form-control profitcrunch-unit-cost" id="disabledInput unit-cost" disabled>
 				</div>
-				<h2 class="input-label">Unit Sell Price:</h2>
+				<label for="ptc">Unit Sell Price:</label>
 				<div class="input-group">
   				<span class="input-group-addon">$</span>
-  				<input type="number" step=".01" class="form-control profitcrunch-unit-ptc">
+  				<input type="number" step=".01" class="form-control profitcrunch-unit-ptc" id="ptc">
 				</div>
 			</div>
 			<div class="col-xs-6">
-				<h2 class="input-label">Total Profit:</h2>
+				<label for="total-profit">Total Profit:</label>
 				<div class="input-group">
   				<span class="input-group-addon">$</span>
-  				<input type="number" step=".01" class="form-control profitcrunch-total-profit" id="disabledInput" disabled>
+  				<input type="number" step=".01" class="form-control profitcrunch-total-profit" id="disabledInput total-profit" disabled>
 				</div>
-				<h2 class="input-label">Unit Profit:</h2>
+				<label for="profit">Unit Profit:</label>
 				<div class="input-group">
   				<span class="input-group-addon">$</span>
-  				<input type="number" step=".01" class="form-control profitcrunch-unit-profit" id="disabledInput" disabled>
+  				<input type="number" step=".01" class="form-control profitcrunch-unit-profit" id="disabledInput profit" disabled>
 				</div>
-				<h2 class="input-label">Gross Profit Margin:</h2>
+				<label for="gross-profit">Gross Profit Margin:</label>
 				<div class="input-group">
-  				<input type="number" step=".01" class="form-control profitcrunch-gross-profit" id="disabledInput" disabled>
+  				<input type="number" step=".01" class="form-control profitcrunch-gross-profit" id="disabledInput gross-profit" disabled>
   				<span class="input-group-addon">%</span>
 				</div>
-				<h2 class="input-label">Markup:</h2>
+				<label for="markup">Markup:</label>
 				<div class="input-group">
-  				<input type="number" step=".01" class="form-control profitcrunch-markup" id="disabledInput" disabled>
+  				<input type="number" step=".01" class="form-control profitcrunch-markup" id="disabledInput markup" disabled>
   				<span class="input-group-addon">%</span>
 				</div>
 			</div>
