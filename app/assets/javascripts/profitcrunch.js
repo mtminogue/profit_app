@@ -134,7 +134,7 @@ function liftPromo() {
 	var totalProfit = unitPTC*units - caseCost;
 	var liftPromo = ((totalProfit/totalProfitPromo) - 1)*100;
 	jQuery('.promo-lift').val( liftPromo.toFixed(2) );
-}
+};
 
 function updateUnitCostPromo() {
 	jQuery('.promo-profitcrunch-units-case').change(unitCostPromo);
@@ -192,7 +192,82 @@ function updateLiftPromo() {
 	jQuery('.profitcrunch-unit-ptc').keyup(liftPromo);
 	jQuery('.profitcrunch-case-cost').keyup(liftPromo);
 	jQuery('.profitcrunch-units-case').keyup(liftPromo);
-}
+};
+
+//Promotion Recap
+function totalProfitRecap() {
+	var unitPTC = jQuery('.profitcrunch-unit-ptc').val();
+	var caseCost = jQuery('.profitcrunch-case-cost').val();
+	var units = jQuery('.profitcrunch-units-case').val();
+	var unitsSold = jQuery('.profitcrunch-units-sold').val();
+	var totalProfitRecap = unitPTC*unitsSold - (caseCost/units)*unitsSold;
+	jQuery('.profitcrunch-total-profit-recap').val( totalProfitRecap.toFixed(2) );
+};
+
+function totalProfitPromoRecap() {
+	var unitPTCPromo = jQuery('.promo-profitcrunch-unit-ptc').val();
+	var caseCostPromo = jQuery('.promo-profitcrunch-case-cost').val();
+	var unitsPromo = jQuery('.promo-profitcrunch-units-case').val();
+	var unitsSoldPromo = jQuery('.promo-profitcrunch-units-sold').val();
+	var totalProfitPromoRecap = unitPTCPromo*unitsSoldPromo - (caseCostPromo/unitsPromo)*unitsSoldPromo;
+	jQuery('.promo-profitcrunch-total-profit-recap').val( totalProfitPromoRecap.toFixed(2) );
+};
+
+function profitRecap() {  //should be called profit recap
+	var unitPTCPromo = jQuery('.promo-profitcrunch-unit-ptc').val();
+	var caseCostPromo = jQuery('.promo-profitcrunch-case-cost').val();
+	var unitsPromo = jQuery('.promo-profitcrunch-units-case').val();
+	var unitsSoldPromo = jQuery('.promo-profitcrunch-units-sold').val();
+	var totalProfitPromoRecap = unitPTCPromo*unitsSoldPromo - (caseCostPromo/unitsPromo)*unitsSoldPromo;
+	var unitPTC = jQuery('.profitcrunch-unit-ptc').val();
+	var caseCost = jQuery('.profitcrunch-case-cost').val();
+	var units = jQuery('.profitcrunch-units-case').val();
+	var unitsSold = jQuery('.profitcrunch-units-sold').val();
+	var totalProfitRecap = unitPTC*unitsSold - (caseCost/units)*unitsSold;
+	var profitRecap = ((totalProfitPromoRecap - totalProfitRecap)/totalProfitRecap)*100;
+	jQuery('.profit-recap').val( profitRecap.toFixed(2) );
+};
+
+function updateTotalProfitRecap() {
+	jQuery('.profitcrunch-units-case').change(totalProfitRecap);
+	jQuery('.profitcrunch-case-cost').change(totalProfitRecap);
+	jQuery('.profitcrunch-unit-ptc').change(totalProfitRecap);
+	jQuery('.profitcrunch-units-case').keyup(totalProfitRecap);
+	jQuery('.profitcrunch-case-cost').keyup(totalProfitRecap);
+	jQuery('.profitcrunch-unit-ptc').keyup(totalProfitRecap);
+	jQuery('.profitcrunch-units-sold').change(totalProfitRecap);
+	jQuery('.profitcrunch-units-sold').keyup(totalProfitRecap);
+};
+
+function updateTotalProfitPromoRecap() {
+	jQuery('.promo-profitcrunch-units-case').change(totalProfitPromoRecap);
+	jQuery('.promo-profitcrunch-case-cost').change(totalProfitPromoRecap);
+	jQuery('.promo-profitcrunch-unit-ptc').change(totalProfitPromoRecap);
+	jQuery('.promo-profitcrunch-units-case').keyup(totalProfitPromoRecap);
+	jQuery('.promo-profitcrunch-case-cost').keyup(totalProfitPromoRecap);
+	jQuery('.promo-profitcrunch-unit-ptc').keyup(totalProfitPromoRecap);
+	jQuery('.promo-profitcrunch-units-sold').change(totalProfitPromoRecap);
+	jQuery('.promo-profitcrunch-units-sold').keyup(totalProfitPromoRecap);
+};
+
+function updateProfitRecap() { // should be called profit recap
+	jQuery('.promo-profitcrunch-unit-ptc').change(profitRecap);
+	jQuery('.promo-profitcrunch-case-cost').change(profitRecap);
+	jQuery('.promo-profitcrunch-units-case').change(profitRecap);
+	jQuery('.promo-profitcrunch-units-sold').change(profitRecap);
+	jQuery('.profitcrunch-unit-ptc').change(profitRecap);
+	jQuery('.profitcrunch-case-cost').change(profitRecap);
+	jQuery('.profitcrunch-units-case').change(profitRecap);
+	jQuery('.profitcrunch-units-sold').change(profitRecap);
+	jQuery('.promo-profitcrunch-unit-ptc').keyup(profitRecap);
+	jQuery('.promo-profitcrunch-case-cost').keyup(profitRecap);
+	jQuery('.promo-profitcrunch-units-case').keyup(profitRecap);
+	jQuery('.promo-profitcrunch-units-sold').keyup(profitRecap);
+	jQuery('.profitcrunch-unit-ptc').keyup(profitRecap);
+	jQuery('.profitcrunch-case-cost').keyup(profitRecap);
+	jQuery('.profitcrunch-units-case').keyup(profitRecap);
+	jQuery('.profitcrunch-units-sold').keyup(profitRecap);
+};
 
 jQuery(document).ready(function() {
 	updateUnitCost();
@@ -206,6 +281,9 @@ jQuery(document).ready(function() {
 	updateGrossProfitPromo();
 	updateMarkupPromo();
 	updateLiftPromo();
+	updateTotalProfitRecap();
+	updateTotalProfitPromoRecap();
+	updateProfitRecap();
 	jQuery(document).on('page:change', function() {
 		updateUnitCost();
 		updateTotalProfit();
@@ -218,5 +296,8 @@ jQuery(document).ready(function() {
 		updateGrossProfitPromo();
 		updateMarkupPromo();
 		updateLiftPromo();
+		updateTotalProfitRecap();
+		updateTotalProfitPromoRecap();
+		updateProfitRecap();
 	});
 });

@@ -1,0 +1,114 @@
+<% provide(:title, 'Promotion Recap Calculator') %>
+<h1>Promotion Recap</h1>
+
+	<div class="row">
+		<div class="col-xs-12 col-sm-6 col-md-4">
+			<h2 class="toggle">
+				<a href="#">How to <span class="caret"></span></a>
+			</h2>
+			<p>If you've run a promotion by putting units on sale, you may want to compare your sales at promotional pricing against your sales at regular pricing.  How many more units did you sell at promotional pricing and was your Total Profit greater?  Promotion Recap lets you compare Regular and Promotional sales data so you can plan better promotions.
+			</p>
+		</div>
+
+		<div class="col-xs-12 col-sm-6 col-md-4">
+			<div class="col-xs-6">
+				<h2><strong><em>Regular</em></strong></h2>
+				<label for="reg-units-case">Units/Case:</label>
+				<div class="input-group">
+  				<input type="number" step=".01" class="form-control profitcrunch-units-case" id="reg-units-case">
+				</div>
+				<label for="reg-units-sold">Units Sold:</label>
+				<div class="input-group">
+  				<span class="input-group-addon">$</span>
+  				<input type="number" step=".01" class="form-control profitcrunch-units-sold" id="reg-units-sold">
+				</div>
+				<label for="reg-case-cost">Case Cost:</label>
+				<div class="input-group">
+  				<span class="input-group-addon">$</span>
+  				<input type="number" step=".01" class="form-control profitcrunch-case-cost" id="reg-case-cost">
+				</div>
+				<label for="reg-unit-cost">Unit Cost:</label>
+				<div class="input-group">
+  				<span class="input-group-addon">$</span>
+  				<input type="number" step=".01" class="form-control profitcrunch-unit-cost" id="disabledInput reg-unit-cost" disabled>
+				</div>
+				<label for="reg-ptc">Unit Sell Price:</label>
+				<div class="input-group">
+  				<span class="input-group-addon">$</span>
+  				<input type="number" step=".01" class="form-control profitcrunch-unit-ptc" id="reg-ptc">
+				</div>
+				<label for="reg-total-profit">Total Profit:</label>
+				<div class="input-group">
+  				<span class="input-group-addon">$</span>
+  				<input type="number" step=".01" class="form-control profitcrunch-total-profit-recap" id="disabledInput reg-total-profit" disabled>
+				</div>
+				<label for="reg-unit-profit">Unit Profit:</label>
+				<div class="input-group">
+  				<span class="input-group-addon">$</span>
+  				<input type="number" step=".01" class="form-control profitcrunch-unit-profit" id="disabledInput reg-unit-profit" disabled>
+				</div>
+				<label for="reg-gross-profit">Gross Profit Margin:</label>
+				<div class="input-group">
+  				<input type="number" step=".01" class="form-control profitcrunch-gross-profit" id="disabledInput reg-gross-profit" disabled>
+  				<span class="input-group-addon">%</span>
+				</div>
+				<label for="reg-markup">Markup:</label>
+				<div class="input-group">
+  				<input type="number" step=".01" class="form-control profitcrunch-markup" id="disabledInput reg-markup" disabled>
+  				<span class="input-group-addon">%</span>
+				</div>
+			</div>
+			<div class="col-xs-6">
+				<h2><strong><em>Promotion</em></strong></h2>
+				<label for="promo-units-case">Units/Case:</label>
+				<div class="input-group">
+  				<input type="number" step=".01" class="form-control promo-profitcrunch-units-case" id="promo-units-case">
+				</div>
+				<label for="promo-units-sold">Units Sold:</label>
+				<div class="input-group">
+  				<span class="input-group-addon">$</span>
+  				<input type="number" step=".01" class="form-control promo-profitcrunch-units-sold" id="promo-units-sold">
+				</div>
+				<label for="promo-case-cost">Case Cost:</label>
+				<div class="input-group">
+  				<span class="input-group-addon">$</span>
+  				<input type="number" step=".01" class="form-control promo-profitcrunch-case-cost" id="promo-case-cost">
+				</div>
+				<label for="promo-unit-cost">Unit Cost:</label>
+				<div class="input-group">
+  				<span class="input-group-addon">$</span>
+  				<input type="number" step=".01" class="form-control promo-profitcrunch-unit-cost" id="disabledInput promo-unit-cost" disabled>
+				</div>
+				<label for="promo-ptc">Unit Sell Price:</label>
+				<div class="input-group">
+  				<span class="input-group-addon">$</span>
+  				<input type="number" step=".01" class="form-control promo-profitcrunch-unit-ptc" id="promo-ptc">
+				</div>
+				<label for="promo-total-profit">Total Profit:</label>
+				<div class="input-group">
+  				<span class="input-group-addon">$</span>
+  				<input type="number" step=".01" class="form-control promo-profitcrunch-total-profit-recap" id="disabledInput promo-total-profit" disabled>
+				</div>
+				<label for="promo-unit-profit">Unit Profit:</label>
+				<div class="input-group">
+  				<span class="input-group-addon">$</span>
+  				<input type="number" step=".01" class="form-control promo-profitcrunch-unit-profit" id="disabledInput promo-unit-profit" disabled>
+				</div>
+				<label for="promo-gross-profit">Gross Profit Margin:</label>
+				<div class="input-group">
+  				<input type="number" step=".01" class="form-control promo-profitcrunch-gross-profit" id="disabledInput promo-gross-profit" disabled>
+  				<span class="input-group-addon">%</span>
+				</div>
+				<label for="promo-markup">Markup:</label>
+				<div class="input-group">
+  				<input type="number" step=".01" class="form-control promo-profitcrunch-markup" id="disabledInput promo-markup" disabled>
+  				<span class="input-group-addon">%</span>
+				</div>
+				<label for="lift">Profit Recap:</label>
+				<div class="input-group">
+  				<input type="number" step=".01" class="form-control profit-recap" id="disabledInput lift" disabled>
+  				<span class="input-group-addon">%</span>
+				</div>
+			</div>
+		</div>
+	</div>

@@ -11,7 +11,7 @@ describe "StaticPages" do
     it { should have_link('Gross Profit Margin Calculator', href: gross_profit_calculator_path) }
     it { should have_link('Markup Calculator', href: markup_calculator_path) }
     it { should have_link('Sales Lift Calculator', href: sales_lift_calculator_path) }
-    it { should have_link('Work to Goal Calculator', href: work_to_goal_calculator_path) }
+    it { should have_link('Promotion Recap', href: promotion_recap_calculator_path) }
     it { should have_link('ProfitCrunch', href: profitcrunch_path) }
   end
 
@@ -61,11 +61,11 @@ describe "StaticPages" do
   	it_should_behave_like "all static pages"
   end
 
-  describe "Work to Goal page" do
-  	before { visit work_to_goal_calculator_path }
+  describe "Promotion Recap page" do
+  	before { visit promotion_recap_calculator_path }
 
-  	let(:heading) { 'Work to Goal' }
-  	let(:page_title) { 'Work to Goal Calculator' }
+  	let(:heading) { 'Promotion Recap' }
+  	let(:page_title) { 'Promotion Recap Calculator' }
 
   	it_should_behave_like "all static pages"
   end

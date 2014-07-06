@@ -4,7 +4,7 @@ ProfitApp::Application.routes.draw do
   match '/gross_profit_calculator', to: 'static_pages#gross_profit', via: 'get'
   match '/markup_calculator', to: 'static_pages#markup', via: 'get'
   match '/sales_lift_calculator', to: 'static_pages#sales_lift', via: 'get'
-  match '/work_to_goal_calculator', to: 'static_pages#work_to_goal', via: 'get'
+  match '/promotion_recap_calculator', to: 'static_pages#promotion_recap', via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

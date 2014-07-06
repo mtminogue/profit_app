@@ -15,6 +15,6 @@ class StaticPagesController < ApplicationController
   def sales_lift
   end
 
-  def work_to_goal
+  def promotion_recap
   end
 end
