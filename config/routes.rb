@@ -5,6 +5,8 @@ ProfitApp::Application.routes.draw do
   match '/markup_calculator', to: 'static_pages#markup', via: 'get'
   match '/sales_lift_calculator', to: 'static_pages#sales_lift', via: 'get'
   match '/promotion_recap_calculator', to: 'static_pages#promotion_recap', via: 'get'
+
+  get "sitemap.xml" => "sitemaps#index", :format => "xml", :as => :sitemap
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
